@@ -4,344 +4,311 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eduport</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <title>Document</title>
     <style type="text/css">
-        select:hover {
-            color: rgb(76, 76, 202);
-        }
+        /* Styles for portrait screens only */
+@media screen and (orientation: portrait) {
+    header, main, footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
 
-        .card {
-            margin-left: 10px;
-        }
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
 
-        .bodypages {
-            height: 150px;
-            width: 300px;
-            align-items: center;
-            justify-items: center;
-        }
+    .d-flex {
+        flex-direction: column;
+        gap: 20px;
+    }
 
-        a {
+    .card {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    .icons1 {
+        justify-content: center;
+    }
+
+    footer ol {
+        text-align: center;
+        padding: 10px;
+    }
+}
+
+        li {
+            margin-left: 2em;
+        }
+        .title{
+            font-weight: bold;
+            font-size: 1.5em;
+            margin-right: 1em;
+        }
+        a{
             text-decoration: none;
-        }
-
-        h4:hover {
-
-            color: rgb(69, 69, 194);
-        }
-        
-        @media screen and (orientation:portrait) {
-            main{
-                display: block;
-            } section{
-                display: flex;
-                flex-direction: column;
-            } 
-            main{
-                display: flex;
-                flex-direction:column;
-                justify-content: center;
-                align-items: center;
-            }
-            footer{
-                display: flex;
-                flex-direction: column;
-            }
+            color: black;
             
-        }
-        @media screen and (orientation:landscape) {
-            .head2{
-                display: flex;
-                flex-direction:row ;
-                justify-content: space-evenly;
-            }
-            section{
-                display: flex;
-                flex-direction: row;
-                justify-content: space-evenly;
-            }
-            main{
-                display: flex;
-                flex-direction: row;
-                justify-content: space-evenly;
-            }
-            footer{
-                display: flex;
-                flex-direction: row;
-                justify-content: space-evenly;
-            }
         }
     </style>
 </head>
 
-<body class="container-fluid bg-white p-3">
-    <h1 style="margin-left: 100px;" class="fs-3">Header</h1>
-    <header>
-        <div class="head2">
-
-            <!-- left items -->
-            <span class="d-flex ">
-                <img src="public/images/india logo" width="50px" height="50px" alt="">
-                <h2>Eduport</h2>
-                <button style="background-color: rgb(141, 175, 164);"
-                    class="bi bi-grid rounded-2 ms-2 text-primary border border-0 "> Category</button>
-
-
-            </span>
-            <!-- center items -->
-            <span class="mt-2">
-                <select name="" id="options" class="text-primary border-0">
-                    <option value="Demons">Demons</option>
-                    <option value="Home">Home Defalut</option>
-                    <option value="Education">Home Education</option>
-                    <option value="Acadamics">Home Acadamics</option>
-                    <option value="Course">Home Course</option>
-
-                </select>
-                <select name="" id="pages" class=" border-0">
-                    <option value="pages">Pages</option>
-                    <option value="Course">Course</option>
-                    <option value="About">About</option>
-                    <option value=" Banner">Hero Banner</option>
-
-                </select>
-                <select name="" id="acounts" class=" border-0">
-                    <option value="Accounts">Accounts</option>
-                    <option value="Course">Course</option>
-                    <option value="About">About</option>
-                    <option value=" Banner">Hero Banner</option>
-
-                </select>
-                <select name="" id="Menu" class=" border-0">
-                    <option value="Megamenu">Megamenu</option>
-                    <option value="Course">Course</option>
-                    <option value="About">About</option>
-                    <option value=" Banner">Hero Banner</option>
-
-                </select>
-
-
-
-            </span>
-            <!--  right items -->
-            <span class="d-flex">
-                <span class="d-flex  border border-1 rounded-2 p-2">
-
-                    <input type="text" name="txtSearch" placeholder="Search" id="search"
-                        class="form-control border-0"><span class="bi bi-search mt-2 "></span>
-                </span>
-                <!--  img -->
-                <img src="public/images/kidsfaaashion.jpeg" class="border-0 rounded-5 mt-2 ms-5" alt="" width="30px"
-                    height="30px">
-            </span>
-            <!--  -->
+<body class="container-fluid">
+    <header class="d-flex flex-row align-items-center justify-content-between">
+        <h2 class="me-3">Eduport</h2>
+        <button class="bi bi-grid-fill me-3 btn btn-outline-primary"> Category</button>
+        <span class="me-3">Demos</span>
+        <span class="me-3">Pages</span>
+        <span class="me-3">Accounts</span>
+        <span class="me-3">Megamenu</span>
+        <span class="me-3">...</span>
+        <div class="input-group w-auto">
+            <input type="text" name="txtname" id="" class="form-control form-control-sm" placeholder="Search">
+            <span class="input-group-text"><span class="bi bi-search"></span></span>
         </div>
     </header>
-    <!-- body pages -->
-    <h3 class="ms-4 mt-3"> body of the pages</h3>
-    <section >
-        <div class="bodypages bg-primary-subtle p-2  card d-flex">
-            <span class="bi bi-tv-fill w-25 text-info fs-3"></span>
-            <span>
-                <b>
-                    10K <br>
-                    online Course
-                </b>
+    <main class="mt-5 p-1">
+        <div class="d-flex flex-column flex-md-row justify-content-around mt-5 mb-5">
+            <span style="padding: 20px; border-radius: 15px;" class="bg-warning-subtle mb-3 mb-md-0">
+                <span class="bi bi-laptop"></span>  10k<br>
+                Online Courses
+            </span>
+            <span style="padding: 20px; border-radius: 15px;" class="bg-secondary-subtle mb-3 mb-md-0">
+                <span class="bi bi-person"></span>  200+<br>
+                Expert Tutors
+            </span>
+            <span style="padding: 20px; border-radius: 15px;" class="bg-danger-subtle mb-3 mb-md-0">
+                <span class="bi bi-person-workspace"></span>  60K+<br>
+                Online Students
+            </span>
+            <span style="padding: 20px; border-radius: 15px;" class="bg-info-subtle mb-3 mb-md-0">
+                <span class="bi bi-patch-check-fill"></span>  6K+<br>
+                Certified Courses
             </span>
         </div>
-        <div class=" bodypages  bg-info-subtle p-2  card d-flex">
-            <span class="bi bi-person-badge-fill w-25 text-info fs-3"></span>
-            <span>
-                <b>
-                    200+ <br>
-                    Expert tutorial
-                </b>
-            </span>
+        <div class="text-center">
+            <h2>Most Popular Courses</h2>
+            <span class="text-secondary">Choose from hundreds of courses from specialist organizations</span>
         </div>
-        <div class="bodypages bodysnd bg-secondary-subtle p-2  card d-flex">
-            <span class="bi bi-mortarboard-fill w-25 text-info fs-3"></span>
-            <span>
-                <b>
-                    60K+<br>
-                    Online Students
-                </b>
-            </span>
-        </div>
-        <div class=" bodypages bodylst bg-success-subtle p-2  card d-flex ">
-            <span class="bi bi-cloud-check-fill w-25 text-info fs-3"></span>
-            <span>
-                <b>
-                    6K+ <br>
-                    Certified Courses
-                </b>
-            </span>
-        </div>
-
-    </section>
-    <div class="justify-content-center text-center  mt-5">
-        <h3 class="fs-1">Most Popular Courses</h3>
-        <p>Choose from hundreds of courses from specialist organizations </p>
-    </div>
-    <div class="d-flex justify-content-evenly bg-info-subtle p-3 m-5 rounded-2 ">
-        <a class="rounded-2 border-0 form-check p-1 text-primary " href="#">Web Design</a>
-        <a class="rounded-2 border-0 form-check p-1 text-primary " href="#">Development</a>
-        <a class="rounded-2 border-0 form-check p-1 text-primary" href="#">Granphic Design</a>
-        <a class="rounded-2 border-0 form-check p-1 text-primary" href="#">Marketing</a>
-        <a class="rounded-2 border-0 form-check p-1 text-primary" href="#">Finance</a>
-    </div>
-
-    <!-- main -->
-
-    <main class="p-5">
-        <div class="card w-25 mt-2 p-2">
-            <img src="public/images/cssxam.png" alt="" class="card-img-top">
-            <div class="card-header justify-content-between ">
-                <span class="bg-danger-subtle p-1 rounded-2 ">All levels</span>
-                <span class="bi bi-heart-fill text-danger " style="margin-left: 120px;"></span>
-            </div>
-
-            <div class="card-body">
-                <h4>SBuild Websites with CSS</h4>
-                <p>Far advanced settling say finished raillery. Offered chiefly</p>
-
-                <span class="bi bi-star-fill " style="color:goldenrod"></span>
-                <span class="bi bi-star-fill " style="color:goldenrod"></span>
-                <span class="bi bi-star-fill " style="color:goldenrod"></span>
-                <span class="bi bi-star-fill " style="color:goldenrod"></span>
-                <span class="bi bi-star-fill " style="color:goldenrod"></span>
-                <span>4.0/5.0</span>
-            </div>
-
-
-            <div class="card-footer justify-content-between">
-                <span class="bi bi-clock text-danger">12h 56m</span>
-                <span class="bi bi-calendar-check ms-3" style="color:rgba(128, 174, 2, 0.591)">99 lectures </span>
-            </div>
-        </div>
-
-        <div class="card w-25 mt-2 p-2">
-            <img src="public/images/learn.png" alt="" class="card-img-top">
-            <div class="card-header justify-content-between ">
-                <span class="bg-danger-subtle p-1 rounded-2 ">All levels</span>
-                <span class="bi bi-heart-fill text-danger " style="margin-left: 120px;"></span>
-            </div>
-
-            <div class="card-body">
-                <h4>Learn Invision</h4>
-                <p>Arrived off she elderly beloved him Course regard to up he hardly.</p>
-
-                <span class="bi bi-star-fill " style="color:goldenrod"></span>
-                <span class="bi bi-star-fill " style="color:goldenrod"></span>
-                <span class="bi bi-star-fill " style="color:goldenrod"></span>
-                <span class="bi bi-star-fill " style="color:goldenrod"></span>
-                <span class="bi bi-star-fill " style="color:goldenrod"></span>
-                <span>4.0/5.0</span>
-            </div>
-
-
-            <div class="card-footer justify-content-between">
-                <span class="bi bi-clock text-danger">12h 56m</span>
-                <span class="bi bi-calendar-check ms-3" style="color:rgba(128, 174, 2, 0.591)">99 lectures </span>
-            </div>
-        </div>
-        <div class="card w-25 mt-2 p-2">
-            <img src="public/images/javascript.png" alt="" class="card-img-top">
-            <div class="card-header justify-content-between ">
-                <span class="bg-danger-subtle p-1 rounded-2 ">All levels</span>
-                <span class="bi bi-heart-fill text-danger " style="margin-left: 120px;"></span>
-            </div>
-
-            <div class="card-body">
-                <h4>SJavaScript: Full Understanding
-                </h4>
-                <p>Far advanced settling say finished raillery. Offered chiefly</p>
-
-                <span class="bi bi-star-fill " style="color:goldenrod"></span>
-                <span class="bi bi-star-fill " style="color:goldenrod"></span>
-                <span class="bi bi-star-fill " style="color:goldenrod"></span>
-                <span class="bi bi-star-fill " style="color:goldenrod"></span>
-                <span class="bi bi-star-fill " style="color:goldenrod"></span>
-                <span>4.0/5.0</span>
-            </div>
-
-
-            <div class="card-footer justify-content-between">
-                <span class="bi bi-clock text-danger">12h 56m</span>
-                <span class="bi bi-calendar-check ms-3" style="color:rgba(128, 174, 2, 0.591)">99 lectures </span>
-            </div>
-        </div>
-        <div class="card w-25 mt-2 p-2">
-            <img src="public/images/html.png" alt="" class="card-img-top">
-            <div class="card-header justify-content-between ">
-                <span class="bg-danger-subtle p-1 rounded-2 ">All levels</span>
-                <span class="bi bi-heart-fill text-danger " style="margin-left: 120px;"></span>
-            </div>
-
-            <div class="card-body">
-                <h4>Sketch from A to Z: for app designer</h4>
-                <p>Proposal indulged no do sociable he throwing settling.</p>
-
-                <span class="bi bi-star-fill " style="color:goldenrod"></span>
-                <span class="bi bi-star-fill " style="color:goldenrod"></span>
-                <span class="bi bi-star-fill " style="color:goldenrod"></span>
-                <span class="bi bi-star-fill " style="color:goldenrod"></span>
-                <span class="bi bi-star-fill " style="color:goldenrod"></span>
-                <span>4.0/5.0</span>
-            </div>
-
-            <div class="card-footer justify-content-between">
-                <span class="bi bi-clock text-danger">12h 56m</span>
-                <span class="bi bi-calendar-check ms-3" style="color:rgba(128, 174, 2, 0.591)">99 lectures </span>
-            </div>
-        </div>
-    </main>
-    <footer >
-        <div class="d-flex justify-content-between m-5 p-3">
-            <div class="w-25">
-                <h3><img src="public/images/india logo" width="40px" height="40px" alt="">Eduport</h3>
-                <p>Eduport education theme, built specifically for the education centers which is dedicated to teaching
-                    and involve learners.</p>
-
-                <div class="justify-content-evenly">
-
-                    <span class="bi bi-instagram bg-info-subtle p-1"></span>
-                    <span class="bi bi-facebook bg-success-subtle p-1 "></span>
-                    <span class="bi bi-twitter bg-danger-subtle p-1"></span>
-                    <span class="bi bi-linkedin bg-info-subtle p-1"></span>
+        <div class="d-flex flex-column flex-md-row justify-content-evenly mt-4 bg-info-subtle p-3">
+            <button class="btn btn-outline-primary mb-2 mb-md-0">Web design</button>
+            <button class="btn btn-outline-primary mb-2 mb-md-0">Development</button>
+            <button class="btn btn-outline-primary mb-2 mb-md-0">Graphic design</button>
+            <button class="btn btn-outline-primary mb-2 mb-md-0">Marketing</button>
+            <button class="btn btn-outline-primary mb-2 mb-md-0">Finance</button>
+        </div><br><br>
+        <!-- card list1 -->
+         
+        <div class="d-flex justify-content-between " id="web">
+            <div class="card" style="width: 18rem;">
+               <img src="public/images/learn.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Sketch from A to Z: for app designer</h5>
+                    <p class="card-text">Proposal indulged no do sociable he throwing settling.</p>
+                    <span class="bi bi-star-fill" style="color: yellow;"></span>
+                    <span class="bi bi-star-fill" style="color: yellow;"></span>
+                    <span class="bi bi-star-fill" style="color: yellow;"></span>
+                    <span class="bi bi-star-fill" style="color: yellow;"></span>
+                    <span class="bi bi-star" style="color: yellow;"></span>
                 </div>
-
+                <div class="card-footer">
+                    <span class="bi bi-clock" style="color: rgb(91, 61, 5);">12hr 30min</span>
+                    <span class="bi bi-calendar float-end " style="color:red ;"> 72 lectures</span>
+                </div>
             </div>
-            <div>
-                <h3>Company</h3>
-                <p>About us</p>
-                <p>contact us</p>
-                <p>News And Blogs</p>
-                <p> Library</p>
+            <div class="card" style="width: 18rem;">
+                <img src="public/images/javascript.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Sketch from A to Z: for app designer</h5>
+                    <p class="card-text">Proposal indulged no do sociable he throwing settling.</p>
+                    <span class="bi bi-star-fill" style="color: yellow;"></span>
+                    <span class="bi bi-star-fill" style="color: yellow;"></span>
+                    <span class="bi bi-star-fill" style="color: yellow;"></span>
+                    <span class="bi bi-star-fill" style="color: yellow;"></span>
+                    <span class="bi bi-star" style="color: yellow;"></span>
+                </div>
+                <div class="card-footer">
+                    <span class="bi bi-clock" style="color: rgb(91, 61, 5);">12hr 30min</span>
+                    <span class="bi bi-calendar float-end " style="color:red ;"> 72 lectures</span>
+                </div>
             </div>
-            <div>
-                <h3>Community</h3>
-                <p>Documentation</p>
-                <p>Laqs</p>
-                <p>Forum</p>
-                <p> Site Map</p>
+            <div class="card" style="width: 18rem;">
+                <img src="public/images/learn.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Sketch from A to Z: for app designer</h5>
+                    <p class="card-text">Proposal indulged no do sociable he throwing settling.</p>
+                    <span class="bi bi-star-fill" style="color: yellow;"></span>
+                    <span class="bi bi-star-fill" style="color: yellow;"></span>
+                    <span class="bi bi-star-fill" style="color: yellow;"></span>
+                    <span class="bi bi-star-fill" style="color: yellow;"></span>
+                    <span class="bi bi-star" style="color: yellow;"></span>
+                </div>
+                <div class="card-footer">
+                    <span class="bi bi-clock" style="color: rgb(91, 61, 5);">12hr 30min</span>
+                    <span class="bi bi-calendar float-end " style="color:red ;"> 72 lectures</span>
+                </div>
             </div>
-            <div>
-                <h3> Teaching</h3>
-                <p>Become a teacher</p>
-                <p>How to guide</p>
-                <p> Terms & Conditions</p>
-            </div>
-            <div>
-                <h3>Contact</h3>
-                <p>Toll free:+1234 568 963</p>
-                <p>(9:AM to 8:PM IST)</p>
-                <p>Email:example@gmail.com</p>
-
+            <div class="card" style="width: 18rem;">
+                <img src="public/images/html.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Sketch from A to Z: for app designer</h5>
+                    <p class="card-text">Proposal indulged no do sociable he throwing settling.</p>
+                    <span class="bi bi-star-fill" style="color: yellow;"></span>
+                    <span class="bi bi-star-fill" style="color: yellow;"></span>
+                    <span class="bi bi-star-fill" style="color: yellow;"></span>
+                    <span class="bi bi-star-fill" style="color: yellow;"></span>
+                    <span class="bi bi-star" style="color: yellow;"></span>
+                </div>
+                <div class="card-footer">
+                    <span class="bi bi-clock" style="color: rgb(91, 61, 5);">12hr 30min</span>
+                    <span class="bi bi-calendar float-end " style="color:red ;"> 72 lectures</span>
+                </div>
             </div>
         </div>
-    </footer>
+         <!-- card list1 -->
+ 
+        <div class="d-flex justify-content-between mt-5" id="dev">
+            <div class="card" style="width: 18rem;">
+                <img src="public/images/cssxam.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Sketch from A to Z: for app designer</h5>
+                    <p class="card-text">Proposal indulged no do sociable he throwing settling.</p>
+                    <span class="bi bi-star-fill" style="color: yellow;"></span>
+                    <span class="bi bi-star-fill" style="color: yellow;"></span>
+                    <span class="bi bi-star-fill" style="color: yellow;"></span>
+                    <span class="bi bi-star-fill" style="color: yellow;"></span>
+                    <span class="bi bi-star" style="color: yellow;"></span>
+                </div>
+                <div class="card-footer">
+                    <span class="bi bi-clock" style="color: rgb(91, 61, 5);">12hr 30min</span>
+                    <span class="bi bi-calendar float-end " style="color:red ;"> 72 lectures</span>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="public/images/html.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Sketch from A to Z: for app designer</h5>
+                    <p class="card-text">Proposal indulged no do sociable he throwing settling.</p>
+                    <span class="bi bi-star-fill" style="color: yellow;"></span>
+                    <span class="bi bi-star-fill" style="color: yellow;"></span>
+                    <span class="bi bi-star-fill" style="color: yellow;"></span>
+                    <span class="bi bi-star-fill" style="color: yellow;"></span>
+                    <span class="bi bi-star" style="color: yellow;"></span>
+                </div>
+                <div class="card-footer">
+                    <span class="bi bi-clock" style="color: rgb(91, 61, 5);">12hr 30min</span>
+                    <span class="bi bi-calendar float-end " style="color:red ;"> 72 lectures</span>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="public/images/javascript.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Sketch from A to Z: for app designer</h5>
+                    <p class="card-text">Proposal indulged no do sociable he throwing settling.</p>
+                    <span class="bi bi-star-fill" style="color: yellow;"></span>
+                    <span class="bi bi-star-fill" style="color: yellow;"></span>
+                    <span class="bi bi-star-fill" style="color: yellow;"></span>
+                    <span class="bi bi-star-fill" style="color: yellow;"></span>
+                    <span class="bi bi-star" style="color: yellow;"></span>
+                </div>
+                <div class="card-footer">
+                    <span class="bi bi-clock" style="color: rgb(91, 61, 5);">12hr 30min</span>
+                    <span class="bi bi-calendar float-end " style="color:red ;"> 72 lectures</span>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="public/images/learn.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Sketch from A to Z: for app designer</h5>
+                    <p class="card-text">Proposal indulged no do sociable he throwing settling.</p>
+                    <span class="bi bi-star-fill" style="color: yellow;"></span>
+                    <span class="bi bi-star-fill" style="color: yellow;"></span>
+                    <span class="bi bi-star-fill" style="color: yellow;"></span>
+                    <span class="bi bi-star-fill" style="color: yellow;"></span>
+                    <span class="bi bi-star" style="color: yellow;"></span>
+                </div>
+                <div class="card-footer">
+                    <span class="bi bi-clock" style="color: rgb(91, 61, 5);">12hr 30min</span>
+                    <span class="bi bi-calendar float-end " style="color:red ;"> 72 lectures</span>
+                </div>
+            </div>
+        </div>
+        <!-- cad list 3 -->
+
+
+        
+    </main>
+    <body>
+        <footer class="d-flex mt-5">
+            <ol>
+                <ol class="heading">
+                    <img src="" width="65%" alt="">
+                </ol>
+                <div class="icons1 ms-5">
+                    <span class="bi bi-facebook"></span>
+                    <span class="bi bi-instagram"></span>
+                    <span class="bi bi-twitter"></span>
+                    <span class="bi bi-linkedin"></span>
+                </div>
+    
+            </ol>
+            <ol>
+                <ol class="title">
+                    Company
+                </ol>
+    
+                <li>About us</li>
+                <li>contact us</span>
+                <li>new books</li>
+                <li>library</li>
+    
+            </ol>
+            <ol>
+                <ol class="title">
+                    Community
+                </ol>
+    
+                <li>Documentation</li>
+                <li>Faq</li>
+                <li>forms</li>
+                <li>sitemap </li>
+    
+            </ol>
+            <ol>
+                <ol class="title ">
+                    Teaching
+    
+                </ol>
+    
+                <li>Become a Teacher</li>
+                <li>how to guid</li>
+                <li>Terms & Conditions</li>
+    
+            </ol>
+            <ol>
+                <ol class="title "style>
+                    Contact
+                </ol>
+    
+    
+                <li>toll free : +1-202-555-0105</li>
+                
+                <li>help@gmail.com</li>
+    
+            </ol>
+    
+    
+        </footer>
 </body>
 
 </html>
