@@ -64,18 +64,72 @@
 </head>
 
 <body class="container-fluid">
-    <header class="d-flex flex-row align-items-center justify-content-between">
-        <h2 class="me-3">Eduport</h2>
-        <button class="bi bi-grid-fill me-3 btn btn-outline-primary"> Category</button>
-        <span class="me-3">Demos</span>
-        <span class="me-3">Pages</span>
-        <span class="me-3">Accounts</span>
-        <span class="me-3">Megamenu</span>
-        <span class="me-3">...</span>
-        <div class="input-group w-auto">
-            <input type="text" name="txtname" id="" class="form-control form-control-sm" placeholder="Search">
-            <span class="input-group-text"><span class="bi bi-search"></span></span>
-        </div>
+    <header class="d-flex justify-content-between mt-3 p-2 ">
+        <nav>
+            <img src="/public/images/WhatsApp Image 2025-03-24 at 18.34.04.jpeg" alt="" style="width:45%;">&nbsp;&nbsp;
+            <button class="btn btn-outline-primary bi bi-ui-radios-grid"> Category</button>
+        </nav>
+        <nav>
+            <div class="btn-group me-3">
+                <button type="button" class="btn btn-outline-primary dropdown-toggle" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Demo
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li><button class="dropdown-item" type="button">Home Default</button></li>
+                    <li><button class="dropdown-item" type="button">Home Education</button></li>
+                    <li><button class="dropdown-item" type="button">Home Academy</button></li>
+                </ul>
+            </div>
+            <div class="btn-group me-3">
+                <button type="button" class="btn btn-outline-primary dropdown-toggle" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Pages
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li><button class="dropdown-item" type="button">course</button></li>
+                    <li><button class="dropdown-item" type="button">about </button></li>
+                    <li><button class="dropdown-item" type="button">introlist</button></li>
+                </ul>
+            </div>
+            <div class="btn-group me-3">
+                <button type="button" class="btn btn-outline-primary dropdown-toggle" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Accounts
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li><button class="dropdown-item" type="button">instructor</button></li>
+                    <li><button class="dropdown-item" type="button">Student</button></li>
+                    <li><button class="dropdown-item" type="button">admin</button></li>
+                </ul>
+            </div>
+            <div class="btn-group me-3">
+                <button type="button" class="btn btn-outline-primary dropdown-toggle" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    MegaMenu
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li><button class="dropdown-item" type="button">degree</button></li>
+                    <li><button class="dropdown-item" type="button">Contact Management</button></li>
+                    <li><button class="dropdown-item" type="button">pubic relation</button></li>
+                </ul>
+            </div>
+            <div class="btn-group">
+                <button type="button" class="btn btn-outline-primary dropdown-toggle" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    ...
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li><button class="dropdown-item" type="button">support</button></li>
+                    <li><button class="dropdown-item" type="button">Documentation</button></li>
+                </ul>
+            </div>
+
+        </nav>
+        <nav class="d-flex">
+            <input type="text" class="form-control bi bi-search" placeholder="Search">
+            <span class="bi bi-search ms-1 fs-5" style="display: inline-block;"></span>
+        </nav>
     </header>
     <main class="mt-5 p-1">
         <div class="d-flex flex-column flex-md-row justify-content-around mt-5 mb-5">
@@ -111,7 +165,7 @@
          
         <div class="d-flex justify-content-between " id="web">
             <div class="card" style="width: 18rem;">
-               <img src="public/images/learn.png" class="card-img-top" alt="...">
+               <img src="public/images/diamond.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Sketch from A to Z: for app designer</h5>
                     <p class="card-text">Proposal indulged no do sociable he throwing settling.</p>
@@ -127,7 +181,7 @@
                 </div>
             </div>
             <div class="card" style="width: 18rem;">
-                <img src="public/images/javascript.png" class="card-img-top" alt="...">
+                <img src="public/images/ps.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Sketch from A to Z: for app designer</h5>
                     <p class="card-text">Proposal indulged no do sociable he throwing settling.</p>
@@ -143,7 +197,7 @@
                 </div>
             </div>
             <div class="card" style="width: 18rem;">
-                <img src="public/images/learn.png" class="card-img-top" alt="...">
+                <img src="public/images/figma.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Sketch from A to Z: for app designer</h5>
                     <p class="card-text">Proposal indulged no do sociable he throwing settling.</p>
@@ -159,7 +213,7 @@
                 </div>
             </div>
             <div class="card" style="width: 18rem;">
-                <img src="public/images/html.png" class="card-img-top" alt="...">
+                <img src="public/images/react.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Sketch from A to Z: for app designer</h5>
                     <p class="card-text">Proposal indulged no do sociable he throwing settling.</p>
@@ -179,7 +233,7 @@
  
         <div class="d-flex justify-content-between mt-5" id="dev">
             <div class="card" style="width: 18rem;">
-                <img src="public/images/cssxam.png" class="card-img-top" alt="...">
+                <img src="public/images/html.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Sketch from A to Z: for app designer</h5>
                     <p class="card-text">Proposal indulged no do sociable he throwing settling.</p>
@@ -195,7 +249,7 @@
                 </div>
             </div>
             <div class="card" style="width: 18rem;">
-                <img src="public/images/html.png" class="card-img-top" alt="...">
+                <img src="public/images/invision.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Sketch from A to Z: for app designer</h5>
                     <p class="card-text">Proposal indulged no do sociable he throwing settling.</p>
@@ -211,7 +265,7 @@
                 </div>
             </div>
             <div class="card" style="width: 18rem;">
-                <img src="public/images/javascript.png" class="card-img-top" alt="...">
+                <img src="public/images/js.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Sketch from A to Z: for app designer</h5>
                     <p class="card-text">Proposal indulged no do sociable he throwing settling.</p>
@@ -227,7 +281,7 @@
                 </div>
             </div>
             <div class="card" style="width: 18rem;">
-                <img src="public/images/learn.png" class="card-img-top" alt="...">
+                <img src="public/images/css.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Sketch from A to Z: for app designer</h5>
                     <p class="card-text">Proposal indulged no do sociable he throwing settling.</p>
@@ -248,67 +302,60 @@
 
         
     </main>
-    <body>
-        <footer class="d-flex mt-5">
-            <ol>
-                <ol class="heading">
-                    <img src="" width="65%" alt="">
-                </ol>
-                <div class="icons1 ms-5">
-                    <span class="bi bi-facebook"></span>
-                    <span class="bi bi-instagram"></span>
-                    <span class="bi bi-twitter"></span>
-                    <span class="bi bi-linkedin"></span>
-                </div>
-    
-            </ol>
-            <ol>
-                <ol class="title">
-                    Company
-                </ol>
-    
-                <li>About us</li>
-                <li>contact us</span>
-                <li>new books</li>
-                <li>library</li>
-    
-            </ol>
-            <ol>
-                <ol class="title">
-                    Community
-                </ol>
-    
-                <li>Documentation</li>
-                <li>Faq</li>
-                <li>forms</li>
-                <li>sitemap </li>
-    
-            </ol>
-            <ol>
-                <ol class="title ">
-                    Teaching
-    
-                </ol>
-    
-                <li>Become a Teacher</li>
-                <li>how to guid</li>
-                <li>Terms & Conditions</li>
-    
-            </ol>
-            <ol>
-                <ol class="title "style>
-                    Contact
-                </ol>
-    
-    
-                <li>toll free : +1-202-555-0105</li>
-                
-                <li>help@gmail.com</li>
-    
-            </ol>
-    
-    
-        </footer>
+    <footer class="mt-5 mb-5">
+        <div class="d-flex flex-column flex-md-row justify-content-between">
+            <div class="mb-4 mb-md-0">
+            <h2>Eduport</h2>
+            <p class="text-secondary">
+                Eduport education theme, built <br>specifically for the education centers <br>which is dedicated to
+                teaching and <br>involve learners.
+            </p>
+            <div>
+                <span class="bi bi-facebook text-primary"></span>
+                <span class="bi bi-instagram text-danger"></span>
+                <span class="bi bi-twitter text-info"></span>
+                <span class="bi bi-linkedin text-primary"></span>
+            </div>
+            </div>
+            <div class="mb-4 mb-md-0">
+            <div><b>Company</b></div><br>
+            <span class="text-secondary">About us</span><br>
+            <span class="text-secondary">Contact us</span><br>
+            <span class="text-secondary">News</span><br>
+            <span class="text-secondary">Library</span><br>
+            <span class="text-secondary">Career</span>
+            </div>
+            <div class="mb-4 mb-md-0">
+            <div><b>Community</b></div><br>
+            <span class="text-secondary">Documentation</span><br>
+            <span class="text-secondary">Faq</span><br>
+            <span class="text-secondary">Forum</span><br>
+            <span class="text-secondary">Sitemap</span>
+            </div>
+            <div class="mb-4 mb-md-0">
+            <div><b>Teaching</b></div><br>
+            <span class="text-secondary">Become a teacher</span><br>
+            <span class="text-secondary">How to guide</span><br>
+            <span class="text-secondary">Terms & Conditions</span>
+            </div>
+            <div>
+            <div><b>Contact</b></div><br>
+            <span class="text-secondary">Toll free: </span><span>+1234 568 963</span><br>
+            <span class="text-secondary">Email: </span><span>example@gmail.com</span>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex flex-column flex-md-row justify-content-between text-secondary">
+            <div class="mb-2 mb-md-0">
+            Copyrights ©2024 Eduport. Build by Webestica
+            </div>
+            <div>
+            <span>Language</span>
+            <span class="ms-3">Terms of Use</span>
+            <span class="ms-3">Privacy policy</span>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
